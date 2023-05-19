@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP CSS 5.3.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- BOOTSTRAP JS 5.3.0 -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <!-- JQUERY 3.6.4 (no se le indica defer ya que necesitamos que este disponible desde antes)-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script defer src="./assets/js/script.js"></script>
+    <link rel="shortcut icon" href="./assets/img/digimon_logo.png" type="image/x-icon">
+    <title>Digimon API</title>
+</head>
+
+<body class="text-light">
+    <!---------------------------------NAVBAR---------------------------------------------------------->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">
+                <img src="./assets/img/digi_logo.png" alt="Bootstrap" width="60" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tbody" id="idLista">Lista</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ---------------------------------------- MAIN ---------------------------------------------->
+    <main class="text-light container text-center">
+        <h1 class="text-center my-3">Digimon API</h1>
+
+        <!---------------------------------- CARD ----------------------------------------------->
+        <div class="card my-1 container bg-secondary" style="width: 18rem;">
+            <img id="idImagenCard" src="./assets/img/digimon_card.jpg" class="card-img-top mt-2" alt="Image digimon">
+            <div class="card-body">
+                <h5 id="idNombreCard" class="card-title">Nombre</h5>
+                <h5 id="idNivelCard" class="card-text">Nivel</h5>
+            </div>
+
+            <!------------------------------------ FORMULARIO ------------------------------------------>
+            <div class="my-1">
+                <form action="" id="idFormulario">
+                    <label for="input_digimon">Digimon:</label>
+                    <input type="text" class="form-label" id="input_digimon" list="idListaDigimon">
+                    <datalist id="idListaDigimon">
+
+                    </datalist>
+                    <button class="btn btn-warning" id="boton">Consultar</button>
+                </form>
+            </div>
+            <!----------------------------------- FIN FORMULARIO  ------------------------------------>
+        </div>
+        <!------------------------------------------ FIN CARD  ------------------------------------->
+
+        <!-- ----------------------------------- TABLA ------------------------------------------- -->
+        <div class="row">
+            <div class="col">
+                <table id="idTabla" class=" table text-light d-none mt-5">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Nivel</th>
+                            <th scope="col">Imagen</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-items-center" id="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
